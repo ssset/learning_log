@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--mnc#05+v-yysv#*#e&&pxd5ra@1ifnxux_8e&wvqcp340q2m8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'yourdomain.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # Мои приложения
     'learning_logs',
     'users',
+    'bootstrap4',
     # Приложения django по умолчанию.
     'django.contrib.admin',
     'django.contrib.auth',
@@ -129,3 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Мои настройки
 LOGIN_URL = '/users/login/'
+
+CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
